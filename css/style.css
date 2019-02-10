@@ -1,5 +1,454 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(242, 242, 242);
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+  color: rgb(51, 51, 51);
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.all-content {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);
+} /* почему-то all-content не прилегает к верху body, остается зазор */
+
+.navigation {
+  background-color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 26px;
+  color: rgb(0, 0, 0);
+}
+
+.navigation__site-navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 56px;
+}
+
+.navigation__item {
+  margin: 0;
+  padding: 0;
+  width: 128px;
+}
+
+.navigation__item--left {
+  text-align: left;
+}
+
+.navigation__item--right {
+  text-align: right;
+}
+
+.navigation__item a:link,
+.navigation__item a:visited {
+  color: rgb(0, 0, 0);
+}
+
+.navigation__item a:hover {
+  color: rgb(129, 179, 210);
+}
+
+.navigation__item a:focus,
+.navigation__item a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.navigation__item--current a:link,
+.navigation__item--current a:visited {
+  color: rgb(118, 99, 87);
+} /* Должен ли меняться текст при наведении и фокусе у ссылки на текущей страницы? Сейчас не меняется */
+
+.main-header {
+  position: relative;
+}
+
+.main-header img {
+  position: absolute;
+  left: 531px;
+  z-index: 1;
+}
+
+.banner {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width:100%;
+  min-height: 508px;
+  background-color: #ffffff, #deecf5;
+  background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg"); /* почему-то маска не прилегает к низу блока, а между ней и низом блока остается тонкая полоска */
+  background-position: bottom center, top center;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.banner img {
+  position: absolute;
+  left: 371px;
+  top: 78px;
+}
+
+.intro {
+  background-color: rgb(255, 255, 255);
+  min-height: 216px;
+}
+
+.intro h1 {
+  margin: 0;
+  padding: 0;
+  padding-top: 63px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.intro p {
+  margin: 0;
+  padding: 0;
+  padding-top: 35px;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.single-reason {
+  position: relative;
+  background-color: rgb(129, 179, 210);
+  width: 400px;
+  min-height: 256px;
+  text-align: center;
+}
+
+.single-reason:last-of-type {
+  margin-left: 800px;
+}
+
+.single-reason:first-of-type::after {
+  display: block;
+  position: absolute;
+  left: 400px;
+  top: 0px;
+  width: 800px;
+  height: 256px;
+  content: "";
+  background-image: url("../img/real-city.jpg");
+  background-color: rgb(168, 181, 163);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.single-reason:last-of-type::before {
+  display: block;
+  position: absolute;
+  right: 400px;
+  top: 0px;
+  width: 800px;
+  height: 256px;
+  content: "";
+  background-image: url("../img/devil's-bridge.jpg");
+  background-color: rgb(168, 181, 163);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.single-reason h3 {
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.single-reason__number {
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgb(255, 255, 255);
+}
+
+.single-reason__explanation {
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgb(255, 255, 255);
+}
+
+.features-list {
+  margin: 0;
+  padding: 0;
+  min-height: 330px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.features-list__item {
+  position: relative;
+  text-align: center;
+  flex-basis: 400px;
+  background-color: rgb(255, 255, 255);
+}
+
+.features-list__item:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  bottom: 198px;
+  left: 160px;
+  width: 80px;
+  height: 80px;
+  background-image: url("../img/icon-1.svg");
+  background-position: 50% bottom;
+  background-repeat: no-repeat;
+}
+
+.features-list__item:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  bottom: 198px;
+  left: 160px;
+  width: 80px;
+  height: 80px;
+  background-image: url("../img/icon-3.svg");
+  background-position: 50% bottom;
+  background-repeat: no-repeat;
+}
+
+.features-list__item:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  bottom: 198px;
+  left: 160px;
+  width: 80px;
+  height: 80px;
+  background-image: url("../img/icon-2.svg");
+  background-position: 50% bottom;
+  background-repeat: no-repeat;
+}
+
+.features-list__item h3 {
+  margin: 0;
+  padding: 0;
+  padding-top: 164px;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+.features-list__item p {
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgb(51, 51, 51);
+}
+
+.reasons-list {
+  margin: 0;
+  padding: 0;
+  min-height: 256px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.reasons-list__item {
+  text-align: center;
+  flex-basis: 400px;
+  background-color: rgb(238, 238, 238);
+}
+
+.reasons-list__item h3 {
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+.reasons-list__number {
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgb(51, 51, 51);
+}
+
+.reasons-list__explanation {
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgb(51, 51, 51);
+}
+
+.hotel-search {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 291px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.hotel-search__bold-text {
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-top: 55px;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+.hotel-search__what-to-do {
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgb(51, 51, 51);
+}
+
+.hotel-search__open-search-button {
+  position:absolute;
+  bottom: 0px;
+  left: 316px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 568px;
+  height: 86px;
+  background-color: rgb(118, 99, 87);
+  color: rgb(255, 255, 255);
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  border: 0px;
+}
+
+.hotel-search__open-search-button:hover,
+.hotel-search__open-search-button:focus {
+  background-color: rgb(96, 78, 67);
+}
+
+.hotel-search__open-search-button:active {
+  background-color: rgb(80, 62, 51);
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .map {
   width: 100%;
   height: 595px;
   border: 0px;
 }
+
+.main-footer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 120px;
+  background-color: rgb(255, 255, 255);
+}
+
+.main-footer--opacity {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.hashtag {
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.footer-social {
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  list-style: none;
+  text-align: center;
+}
+
+.footer-social__item {
+
+}
+
+.footer-copyright {
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  font-size: 14px;
+  line-height: 26px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.footer-copyright svg {
+  width: 113px;
+  height: 39px;
+}
+
+/* Если задавать стили для path, то все работает для отдельных букв логотипа, если для svg, то вообще ничего не работает
+
+.footer-copyright path {
+  fill: rgb(0, 0, 0);
+}
+
+.footer-copyright path:hover,
+.footer-copyright path:focus {
+  fill: rgb(129, 179, 210);
+}
+
+.footer-copyright path:active {
+  fill: rgb(189, 187, 188);
+}
+
+*/
