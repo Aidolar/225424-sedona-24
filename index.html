@@ -39,36 +39,38 @@
           <img src="img/intro-welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona, because the Grand canyon sucks">
         </div>
         <section class="intro">
-          <h1>Седона — небольшой городок в Аризоне,</br>
-             заслуживающий большего!
-          </h1>
+          <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </section>
         <section class="reasons-and-features">
-          <div class="single-reason">
-                <h3>Настоящий</br> городок</h3>
-                <p class="single-reason__number">&mdash; №1 &mdash;</p>
-                <p class="single-reason__explanation">Седона &mdash; не аттракцион для туристов,</br> там течёт жизнь</p>
+          <div class="single-reason-container">
+            <div class="single-reason">
+              <h3>Настоящий</br> городок</h3>
+              <p class="single-reason__number">&mdash; №1 &mdash;</p>
+              <p class="single-reason__explanation">Седона &mdash; не аттракцион для туристов, там течёт жизнь</p>
+            </div>
           </div>
           <ul class="features-list">
             <li class="features-list__item">
               <h3>Жильё</h3>
-              <p>Рекомендуем пожить в настоящем</br> мотеле, всё как в кино!</p>
+              <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
             </li>
             <li class="features-list__item">
               <h3>Еда</h3>
-              <p>Всегда заказывайте фирменный бургер,</br> вы не разочаруетесь!</p>
+              <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
             <li class="features-list__item">
               <h3>Сувениры</h3>
-              <p>Не только китайского, но и местного</br> производства</p>
+              <p>Не только китайского, но и местного производства</p>
             </li>
           </ul>
-          <div class="single-reason">
-            <h3>Там есть</br> мост дьявола</h3>
-            <p class="single-reason__number">&mdash; №2 &mdash;</p>
-            <p class="single-reason__explanation">Да, по нему можно пройти! Если конечно</br> вы осмелитесь</p>
+          <div class="single-reason-container">
+            <div class="single-reason">
+              <h3>Там есть</br> мост дьявола</h3>
+              <p class="single-reason__number">&mdash; №2 &mdash;</p>
+              <p class="single-reason__explanation">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
+        </div>
           <ul class="reasons-list">
             <li class="reasons-list__item">
               <h3>Небольшая площадь</h3>
@@ -93,7 +95,49 @@
           <p class="hotel-search__what-to-do">Укажите предполагаемые даты поездки,</br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <button class="hotel-search__open-search-button" type="button">Поиск гостиницы в Седоне</button>
         </section>
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d498731.4973305329!2d-111.9262436404703!3d34.7931689787591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1549123246517" allowfullscreen></iframe>
+        <div class="map-and-modal">
+          <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d498731.4973305329!2d-111.9262436404703!3d34.7931689787591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1549123246517" allowfullscreen></iframe>
+          <section class="modal modal-search-form">
+            <h2 class="visually-hidden">Форма поиска гостиницы</h2>
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+              <p class="search-form__date">
+                <label for="arrival-date">Дата заезда:</label>
+                <input id="arrival-date" type="text" name="arrival-date" value="" placeholder="24 апреля 2017">
+                <button  class="search-form__calendar" type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
+                    <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/>
+                    <path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/>
+                  </svg>
+                </button>
+              </p>
+              <p class="search-form__date">
+                <label for="departure-date">Дата выезда:</label>
+                <input id="departure-date" type="text" name="departure-date" value="" placeholder="4 июля 2017">
+                <button  class="search-form__calendar" type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
+                    <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/>
+                    <path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/>
+                  </svg>
+                </button>
+              </p>
+              <p class="search-form__number-of-peoples">
+                <span class="search-form__number-form-block">
+                  <label for="number-of-adults">Взрослые:</label>
+                  <button class="search-form__count-button search-form__count-button--minus" type="button">-</button>
+                  <input id="number-of-adults" type="number" name="number-of-adults" step="1" value="" placeholder="2">
+                  <button class="search-form__count-button search-form__count-button--plus" type="button">+</button>
+                </span>
+                <span class="search-form__number-form-block">
+                  <label for="number-of-children">Дети:</label>
+                  <button class="search-form__count-button search-form__count-button--minus" type="button">-</button>
+                  <input id="number-of-children" type="number" name="number-of-children" step="1" value="" placeholder="0">
+                  <button class="search-form__count-button search-form__count-button--plus" type="button">+</button>
+                </span>
+              </p>
+              <button class="submit-search-button" type="submit">Найти</button>
+            </form>
+          </section>
+        </div>
       </main>
 <!-- Footer -->
       <footer class="main-footer main-footer--opacity">
@@ -130,47 +174,6 @@
           </a>
         </p>
       </footer>
-
-      <section class="modal modal-search-form">
-        <h2 class="visually-hidden">Форма поиска гостиницы</h2>
-        <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-          <p class="search-form__date">
-            <label for="arrival-date">Дата заезда:</label>
-            <input id="arrival-date" type="text" name="arrival-date" value="" placeholder="24 апреля 2017">
-            <button  class="search-form__calendar" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
-                <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/>
-                <path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/>
-              </svg>
-            </button>
-          </p>
-          <p class="search-form__date">
-            <label for="departure-date">Дата выезда:</label>
-            <input id="departure-date" type="text" name="departure-date" value="" placeholder="4 июля 2017">
-            <button  class="search-form__calendar" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
-                <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/>
-                <path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/>
-              </svg>
-            </button>
-          </p>
-          <p class="search-form__number-of-peoples">
-            <span class="search-form__number-form-block">
-              <label for="number-of-adults">Взрослые:</label>
-              <button class="search-form__count-button search-form__count-button--minus" type="button">-</button>
-              <input id="number-of-adults" type="number" name="number-of-adults" step="1" value="" placeholder="2">
-              <button class="search-form__count-button search-form__count-button--plus" type="button">+</button>
-            </span>
-            <span class="search-form__number-form-block">
-              <label for="number-of-children">Дети:</label>
-              <button class="search-form__count-button search-form__count-button--minus" type="button">-</button>
-              <input id="number-of-children" type="number" name="number-of-children" step="1" value="" placeholder="0">
-              <button class="search-form__count-button search-form__count-button--plus" type="button">+</button>
-            </span>
-          </p>
-          <button class="submit-search-button" type="submit">Найти</button>
-        </form>
-      </section>
     </div>
   </body>
 </html>

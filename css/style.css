@@ -14,13 +14,21 @@ a {
   text-decoration: none;
 }
 
-.visually-hidden {
-  margin: 0;
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
   padding: 0;
-  display: none;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .all-content {
+  position: relative;
   width: 1200px;
   margin: 0 auto;
   background-color: rgb(255, 255, 255);
@@ -28,6 +36,9 @@ a {
 }
 
 .navigation {
+  margin: 0;
+  padding: 0;
+  width: 100%;
   background-color: #ffffff;
   font-size: 14px;
   font-weight: bold;
@@ -38,25 +49,67 @@ a {
 .navigation__site-navigation {
   margin: 0;
   padding: 0;
+  padding-left: 73px;
+  padding-right: 73px;
   list-style: none;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  min-height: 56px;
 }
 
 .navigation__item {
   margin: 0;
-  padding: 0;
-  width: 128px;
+  padding: 16px 0px 18px 0px;
+  width: 240px;
 }
+
+/*
 
 .navigation__item--left {
   text-align: left;
 }
 
+.navigation__item--left:nth-child(even) {
+  margin-right: auto;
+}
+
+.navigation__item--left:nth-child(odd) {
+  margin-right: 0;
+}
+
 .navigation__item--right {
   text-align: right;
+}
+
+.navigation__item--right:nth-child(even) {
+  margin-left: 0;
+}
+
+.navigation__item--right:nth-child(odd) {
+  margin-left: auto;
+}
+
+*/
+
+.navigation__item:nth-child(4n+1) {
+  text-align: left;
+  margin-right: 0;
+}
+
+.navigation__item:nth-child(4n+2) {
+  text-align: left;
+  margin-right: auto;
+}
+
+.navigation__item:nth-child(4n+3) {
+  text-align: right;
+  margin-left: auto;
+}
+
+.navigation__item:nth-child(4n+4) {
+  text-align: right;
+  margin-left: 0;
 }
 
 .navigation__item a:link,
@@ -115,6 +168,8 @@ a {
   margin: 0;
   padding: 0;
   padding-top: 63px;
+  padding-left: 380px;
+  padding-right: 380px;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -131,23 +186,14 @@ a {
   text-align: center;
 }
 
-.single-reason {
-  position: relative;
-  background-color: rgb(129, 179, 210);
-  width: 400px;
-  min-height: 256px;
-  text-align: center;
+.single-reason-container {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
 }
 
-.single-reason:last-of-type {
-  margin-left: 800px;
-}
-
-.single-reason:first-of-type::after {
-  display: block;
-  position: absolute;
-  left: 400px;
-  top: 0px;
+.single-reason-container:first-of-type::after {
   width: 800px;
   height: 256px;
   content: "";
@@ -158,11 +204,7 @@ a {
   background-size: cover;
 }
 
-.single-reason:last-of-type::before {
-  display: block;
-  position: absolute;
-  right: 400px;
-  top: 0px;
+.single-reason-container:last-of-type::before {
   width: 800px;
   height: 256px;
   content: "";
@@ -171,6 +213,13 @@ a {
   background-position: top left;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.single-reason {
+  background-color: rgb(129, 179, 210);
+  width: 400px;
+  min-height: 256px;
+  text-align: center;
 }
 
 .single-reason h3 {
@@ -196,6 +245,8 @@ a {
   margin: 0;
   padding: 0;
   padding-top: 30px;
+  padding-left: 48px;
+  padding-right: 48px;
   font-size: 14px;
   line-height: 21px;
   color: rgb(255, 255, 255);
@@ -268,6 +319,8 @@ a {
   margin: 0;
   padding: 0;
   padding-top: 30px;
+  padding-left: 55px;
+  padding-right: 55px;
   font-size: 14px;
   line-height: 21px;
   color: rgb(51, 51, 51);
@@ -377,10 +430,26 @@ a {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.map-and-modal {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 .map {
   width: 100%;
   height: 595px;
   border: 0px;
+}
+
+.modal-search-form {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 316px;
+  width: 568px;
+  background-color: rgb(255, 255, 255);
 }
 
 .main-footer {
@@ -395,6 +464,8 @@ a {
 }
 
 .main-footer--opacity {
+  position: absolute;
+  bottom: 0px;
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -463,6 +534,8 @@ a {
 .hotels-list-item {
   margin: 0;
   padding: 0;
+  padding-left: 73px;
+  padding-right: 73px;
   box-sizing: border-box;
   padding-top: 30px;
   border-top: 1px solid rgb(229, 229, 229);
