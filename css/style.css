@@ -14,6 +14,11 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -49,48 +54,19 @@ a {
 .navigation__site-navigation {
   margin: 0;
   padding: 0;
-  padding-left: 73px;
-  padding-right: 73px;
+  padding-left: 72px;
+  padding-right: 72px;
   list-style: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
 }
 
 .navigation__item {
   margin: 0;
-  padding: 16px 0px 18px 0px;
-  width: 240px;
+  padding: 14px 0px 16px 0px;
+  width: 241px;
 }
-
-/*
-
-.navigation__item--left {
-  text-align: left;
-}
-
-.navigation__item--left:nth-child(even) {
-  margin-right: auto;
-}
-
-.navigation__item--left:nth-child(odd) {
-  margin-right: 0;
-}
-
-.navigation__item--right {
-  text-align: right;
-}
-
-.navigation__item--right:nth-child(even) {
-  margin-left: 0;
-}
-
-.navigation__item--right:nth-child(odd) {
-  margin-left: auto;
-}
-
-*/
 
 .navigation__item:nth-child(4n+1) {
   text-align: left;
@@ -129,7 +105,7 @@ a {
 .navigation__item--current a:link,
 .navigation__item--current a:visited {
   color: rgb(118, 99, 87);
-} /* Должен ли меняться текст при наведении и фокусе у ссылки на текущей странице? Сейчас не меняется */
+}
 
 .main-header {
   position: relative;
@@ -137,7 +113,9 @@ a {
 
 .main-header img {
   position: absolute;
-  left: 531px;
+  top: 0px;
+  left: 50%;
+  margin-left: -68px;
   z-index: 1;
 }
 
@@ -146,30 +124,31 @@ a {
   padding: 0;
   margin: 0;
   width:100%;
-  min-height: 508px;
+  height: 508px; /* В данном случае наверное можно прописать, ведь текстового контента нет, значит и переполнения им не будет */
   background-color: #ffffff, #deecf5;
-  background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg"); /* почему-то маска не прилегает к низу блока, а между ней и низом блока остается тонкая полоска */
+  background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg");
   background-position: bottom center, top center;
   background-repeat: no-repeat, no-repeat;
 }
 
 .banner img {
   position: absolute;
-  left: 371px;
-  top: 78px;
+  left: 50%;
+  top: 76px;
+  margin-left: -228px;
 }
 
 .intro {
   background-color: rgb(255, 255, 255);
-  min-height: 216px;
+  width: 100%;
 }
 
 .intro h1 {
   margin: 0;
   padding: 0;
-  padding-top: 63px;
-  padding-left: 380px;
+  padding-top: 60px;
   padding-right: 380px;
+  padding-left: 380px;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -179,7 +158,10 @@ a {
 .intro p {
   margin: 0;
   padding: 0;
-  padding-top: 35px;
+  padding-top: 27px;
+  padding-right: 352px;
+  padding-bottom: 51px;
+  padding-left: 350px;
   font-size: 14px;
   line-height: 26px;
   font-weight: normal;
@@ -195,7 +177,7 @@ a {
 
 .single-reason-container:first-of-type::after {
   width: 800px;
-  height: 256px;
+  min-height: 256px; /* Можно ли тут оставить? Чтобы минимальная высота блока равнялась высоте фоновой картинки */
   content: "";
   background-image: url("../img/real-city.jpg");
   background-color: rgb(168, 181, 163);
@@ -206,7 +188,7 @@ a {
 
 .single-reason-container:last-of-type::before {
   width: 800px;
-  height: 256px;
+  min-height: 256px; /* Можно ли тут оставить? Чтобы минимальная высота блока равнялась высоте фоновой картинки */
   content: "";
   background-image: url("../img/devil's-bridge.jpg");
   background-color: rgb(168, 181, 163);
@@ -218,14 +200,15 @@ a {
 .single-reason {
   background-color: rgb(129, 179, 210);
   width: 400px;
-  min-height: 256px;
   text-align: center;
 }
 
 .single-reason h3 {
   margin: 0;
   padding: 0;
-  padding-top: 50px;
+  padding-top: 47px;
+  padding-right: 120px;
+  padding-left: 120px;
   font-size: 21px;
   line-height: 21px;
   font-weight: bold;
@@ -235,7 +218,7 @@ a {
 .single-reason__number {
   margin: 0;
   padding: 0;
-  padding-top: 30px;
+  padding-top: 23px;
   font-size: 14px;
   line-height: 21px;
   color: rgb(255, 255, 255);
@@ -244,9 +227,10 @@ a {
 .single-reason__explanation {
   margin: 0;
   padding: 0;
-  padding-top: 30px;
-  padding-left: 48px;
+  padding-top: 21px;
   padding-right: 48px;
+  padding-bottom: 59px;
+  padding-left: 48px;
   font-size: 14px;
   line-height: 21px;
   color: rgb(255, 255, 255);
@@ -255,9 +239,9 @@ a {
 .features-list {
   margin: 0;
   padding: 0;
-  min-height: 330px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
 }
@@ -265,14 +249,14 @@ a {
 .features-list__item {
   position: relative;
   text-align: center;
-  flex-basis: 400px;
+  width: 400px;
   background-color: rgb(255, 255, 255);
 }
 
 .features-list__item:nth-child(1)::before {
   content: "";
   position: absolute;
-  bottom: 198px;
+  top: 52px;
   left: 160px;
   width: 80px;
   height: 80px;
@@ -284,7 +268,7 @@ a {
 .features-list__item:nth-child(2)::before {
   content: "";
   position: absolute;
-  bottom: 198px;
+  top: 51px;
   left: 160px;
   width: 80px;
   height: 80px;
@@ -296,7 +280,7 @@ a {
 .features-list__item:nth-child(3)::before {
   content: "";
   position: absolute;
-  bottom: 198px;
+  top: 52px;
   left: 160px;
   width: 80px;
   height: 80px;
@@ -308,7 +292,7 @@ a {
 .features-list__item h3 {
   margin: 0;
   padding: 0;
-  padding-top: 164px;
+  padding-top: 161px;
   font-size: 21px;
   line-height: 21px;
   font-weight: bold;
@@ -318,9 +302,10 @@ a {
 .features-list__item p {
   margin: 0;
   padding: 0;
-  padding-top: 30px;
-  padding-left: 55px;
+  padding-top: 24px;
   padding-right: 55px;
+  padding-bottom: 82px;
+  padding-left: 55px;
   font-size: 14px;
   line-height: 21px;
   color: rgb(51, 51, 51);
@@ -329,23 +314,25 @@ a {
 .reasons-list {
   margin: 0;
   padding: 0;
-  min-height: 256px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
 }
 
 .reasons-list__item {
   text-align: center;
-  flex-basis: 400px;
+  width: 400px;
   background-color: rgb(238, 238, 238);
 }
 
 .reasons-list__item h3 {
   margin: 0;
   padding: 0;
-  padding-top: 50px;
+  padding-top: 47px;
+  padding-right: 141px;
+  padding-left: 141px;
   font-size: 21px;
   line-height: 21px;
   font-weight: bold;
@@ -355,7 +342,7 @@ a {
 .reasons-list__number {
   margin: 0;
   padding: 0;
-  padding-top: 30px;
+  padding-top: 24px;
   font-size: 14px;
   line-height: 21px;
   color: rgb(51, 51, 51);
@@ -364,9 +351,14 @@ a {
 .reasons-list__explanation {
   margin: 0;
   padding: 0;
-  padding-top: 30px;
+  padding-top: 20px;
+  padding-right: 65px;
+  padding-bottom: 60px;
+  padding-left: 65px;
+  white-space: pre; /* Костыль, но без него никак... */
   font-size: 14px;
   line-height: 21px;
+  text-align: center;
   color: rgb(51, 51, 51);
 }
 
@@ -375,7 +367,6 @@ a {
   margin: 0;
   padding: 0;
   width: 100%;
-  min-height: 291px;
   background-color: rgb(255, 255, 255);
   text-align: center;
 }
@@ -384,7 +375,7 @@ a {
   display: block;
   margin: 0;
   padding: 0;
-  padding-top: 55px;
+  padding-top: 50px;
   font-size: 30px;
   line-height: 36px;
   font-weight: bold;
@@ -394,7 +385,8 @@ a {
 .hotel-search__what-to-do {
   margin: 0;
   padding: 0;
-  padding-top: 30px;
+  padding-top: 24px;
+  padding-bottom: 133px;
   font-size: 14px;
   line-height: 24px;
   color: rgb(51, 51, 51);
@@ -439,27 +431,292 @@ a {
 
 .map {
   width: 100%;
-  height: 595px;
+  height: 593px;
   border: 0px;
 }
 
-.modal-search-form {
+.modal {
+  display: none;
   position: absolute;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-left: 55px;
+  padding-right: 55px;
   z-index: 1;
   top: 0px;
   left: 316px;
   width: 568px;
   background-color: rgb(255, 255, 255);
+  box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 1s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-395px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.date {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.date:first-child {
+  margin-top: 55px;
+}
+
+.date__label {
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 112px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 26px;
+  color: rgb(0, 0, 0);
+}
+
+.date__container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 346px;
+}
+
+.date__container input {
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 6px;
+  padding-right: 50px;
+  padding-bottom: 6px;
+  padding-left: 13px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  background-color: rgb(242, 242, 242);
+  border: 0px;
+}
+
+.date__container input:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.date__container input:focus {
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  outline: 2px solid rgb(229, 229, 229);
+  outline-offset: -2px;
+}
+
+input::-moz-placeholder {
+  color: rgb(0, 0, 0);
+  opacity: 1;
+}
+
+input::-webkit-input-placeholder {
+  color: rgb(0, 0, 0);
+}
+
+input:-ms-input-placeholder {
+  color: rgb(0, 0, 0);
+}
+
+input::-ms-input-placeholder {
+  color: rgb(0, 0, 0);
+}
+
+input::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.date__calendar {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: 0px;
+  top: 8px;
+  right: 9px;
+}
+
+.date__calendar path {
+  fill: rgb(202, 202, 202);
+}
+
+.date__calendar:hover path,
+.date__calendar:focus path {
+  fill: rgb(0, 0, 0);
+}
+
+.date__calendar:active path {
+  fill: rgb(129, 179, 210);
+}
+
+.clients-number {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.clients-number__label {
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 112px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 26px;
+  color: rgb(0, 0, 0);
+}
+
+.clients-number__label--align-right {
+  text-align: right;
+  padding-right: 28px;
+}
+
+.clients-number__container {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 114px;
+}
+
+.clients-number__container input {
+  margin: 0;
+  padding: 0;
+  width: 38px;
+  height: 38px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  vertical-align: middle;
+  background-color: rgb(242, 242, 242);
+  border: 0px;
+}
+
+.clients-number__count-button {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 38px;
+  height: 38px;
+  border: 0px;
+  font-size: 0px;
+  background-color: rgb(242, 242, 242);
+}
+
+.clients-number__count-button--plus::before,
+.clients-number__count-button--plus::after,
+.clients-number__count-button--minus::before {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 3px;
+  background-color: rgb(169, 169, 169);
+  top: 18px;
+  left: 13px;
+}
+
+.clients-number__count-button--plus::after {
+  transform: rotate(90deg);
+}
+
+.clients-number__count-button--plus:hover::before,
+.clients-number__count-button--plus:focus::before,
+.clients-number__count-button--minus:hover::before,
+.clients-number__count-button--minus:focus::before,
+.clients-number__count-button--plus:hover::after,
+.clients-number__count-button--plus:focus::after,
+.clients-number__count-button--minus:hover::after,
+.clients-number__count-button--minus:focus::after {
+  background-color: rgb(0, 0, 0);
+}
+
+.clients-number__count-button--plus:active::before,
+.clients-number__count-button--minus:active::before,
+.clients-number__count-button--plus:active::after,
+.clients-number__count-button--minus:active::after {
+  background-color: rgb(129, 179, 210);
+}
+
+.submit-search-button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-top: 53px;
+  margin-bottom: 54px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 100%;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(129, 179, 210);
+  border: 0px;
+}
+
+.submit-search-button:hover,
+.submit-search-button:focus {
+  background-color: rgb(102, 158, 192);
+}
+
+.submit-search-button:active {
+  background-color: rgb(84, 150, 189);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .main-footer {
+  width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 36px 0;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  min-height: 120px;
   background-color: rgb(255, 255, 255);
 }
 
@@ -481,18 +738,47 @@ a {
 }
 
 .footer-social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
-  width: 400px;
+  width: 150px;
   list-style: none;
-  text-align: center;
 }
 
 .footer-social__item {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(129, 179, 210);
+}
 
+.footer-social__link {
+  display: flex;
+  width: 46px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social__link:hover,
+.footer-social__link:focus {
+  background-color: rgb(102, 158, 192);
+}
+
+.footer-social__link:active {
+  background-color: rgb(84, 150, 189);
+  fill: rgba(255, 255, 255, 0.3);
+}
+
+.footer-social__link:active path {
+  fill: rgba(255, 255, 255, 0.3);
 }
 
 .footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
   width: 400px;
@@ -502,27 +788,45 @@ a {
   text-align: center;
 }
 
+.footer-copyright span {
+  padding-right: 6px;
+  padding-bottom: 7px;
+}
+
+.footer-copyright a {
+  padding-left: 6px;
+}
+
 .footer-copyright svg {
   width: 113px;
   height: 39px;
 }
 
-/* Если задавать стили для path, то все работает для отдельных букв логотипа, если для svg, то вообще ничего не работает
-
 .footer-copyright path {
   fill: rgb(0, 0, 0);
 }
 
-.footer-copyright path:hover,
-.footer-copyright path:focus {
+.footer-copyright:hover path,
+.footer-copyright:focus path {
   fill: rgb(129, 179, 210);
 }
 
-.footer-copyright path:active {
+.footer-copyright:active path {
   fill: rgb(189, 187, 188);
 }
 
-*/
+.footer-copyright rect {
+  fill: rgb(0, 0, 0);
+}
+
+.footer-copyright:hover rect,
+.footer-copyright:focus rect {
+  fill: rgb(129, 179, 210);
+}
+
+.footer-copyright:active rect {
+  fill: rgb(189, 187, 188);
+}
 
 .hotels-list {
   margin: 0;
