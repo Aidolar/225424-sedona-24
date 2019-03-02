@@ -137,7 +137,7 @@ input::-ms-clear {
   padding: 0;
   margin: 0;
   width:100%;
-  height: 508px; /* В данном случае наверное можно прописать, ведь текстового контента нет, значит и переполнения им не будет */
+  height: 508px;
   background-color: rgb(255, 255, 255), rgb(108, 133, 154);
   background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg");
   background-position: bottom center, top center;
@@ -195,7 +195,7 @@ input::-ms-clear {
 
 .single-reason-container:first-of-type::after {
   width: 800px;
-  min-height: 256px; /* Можно ли тут оставить? Чтобы минимальная высота блока равнялась высоте фоновой картинки */
+  min-height: 256px;
   content: "";
   background-image: url("../img/real-city.jpg");
   background-color: rgb(157, 120, 90);
@@ -206,7 +206,7 @@ input::-ms-clear {
 
 .single-reason-container:last-of-type::before {
   width: 800px;
-  min-height: 256px; /* Можно ли тут оставить? Чтобы минимальная высота блока равнялась высоте фоновой картинки */
+  min-height: 256px;
   content: "";
   background-image: url("../img/devil's-bridge.jpg");
   background-color: rgb(130, 81, 57);
