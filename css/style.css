@@ -1065,6 +1065,8 @@ input::placeholder {
 
   list-style: none;
 
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1082,7 +1084,7 @@ input::placeholder {
 }
 
 .footer-social__item:last-child {
-  margin: 0;
+  margin-right: 0;
   padding: 0;
 
   background-color: rgb(129, 179, 210);
@@ -1526,6 +1528,8 @@ input::placeholder {
 
   list-style: none;
 
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
