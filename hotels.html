@@ -7,13 +7,13 @@
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.min.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <div class="all-content">
       <header class="main-header">
         <nav class="navigation">
-          <a href="index.html" aria-label="Ссылка на главную страницу">
+          <a href="#" aria-label="Ссылка на главную страницу">
             <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип City of Sedona">
           </a>
           <ul class="navigation__site-navigation">
@@ -71,19 +71,17 @@
               </ul>
             </div>
             <div class="filter-form-part filter-form-part--price-per-day">
-              <div class="filter-form-part__choose-price-block">
-                <h3 class="filter-form-part__header filter-form-part__header--price-per-day">Стоимость в сутки (р):</h3>
-                <div class="filter-form-part__price-controls">
-                  <label class="filter-form-part__price">от <input type="text" name="min-price" value="0"></label>
-                  <label class="filter-form-part__price">до <input type="text" name="max-price" value="3000"></label>
+              <h3 class="filter-form-part__header filter-form-part__header--price-per-day">Стоимость в сутки (р):</h3>
+              <div class="filter-form-part__price-controls">
+                <label class="filter-form-part__price">от <input type="text" name="min-price" value="0"></label>
+                <label class="filter-form-part__price">до <input type="text" name="max-price" value="3000"></label>
+              </div>
+              <div class="filter-form-part__range-controls">
+                <div class="filter-form-part__scale">
+                  <div class="filter-form-part__bar"></div>
                 </div>
-                <div class="filter-form-part__range-controls">
-                  <div class="filter-form-part__scale">
-                    <div class="filter-form-part__bar"></div>
-                  </div>
-                  <div class="filter-form-part__range-toggle filter-form-part__range-toggle--min"></div>
-                  <div class="filter-form-part__range-toggle filter-form-part__range-toggle--max"></div>
-                </div>
+                <div class="filter-form-part__range-toggle filter-form-part__range-toggle--min"></div>
+                <div class="filter-form-part__range-toggle filter-form-part__range-toggle--max"></div>
               </div>
               <button class="filter-form-part__button-transparent" type="submit">Показать</button>
             </div>
