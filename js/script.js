@@ -6,6 +6,8 @@ var departureDate = popup.querySelector("[name=departure-date]");
 var isStorageSupport = true;
 var storage = "";
 
+document.querySelector(".no-js").classList.remove("no-js");
+
 try {
   storage = localStorage.getItem("arrival-date");
 } catch (err) {
@@ -14,7 +16,7 @@ try {
 
 button.addEventListener("click", function (evt) {
   evt.preventDefault();
-  popup.classList.toggle("modal-not-show");
+  popup.classList.toggle("modal-show");
   popup.classList.remove("modal-error");
   if (storage) {
       arrivalDate.value = storage;
@@ -40,8 +42,8 @@ form.addEventListener("submit", function (evt) {
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
       evt.preventDefault();
-      if (popup.classList.contains("modal")) {
-        popup.classList.add("modal-not-show");
+      if (popup.classList.contains("modal-show")) {
+        popup.classList.remove("modal-show");
         popup.classList.remove("modal-error");
       }
     }
