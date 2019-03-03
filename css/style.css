@@ -385,7 +385,7 @@ input::-ms-clear {
 .reasons-list__explanation {
   margin: 0;
   padding: 0;
-  padding-top: 21px;
+  padding-top: 22px;
   padding-right: 65px;
   padding-bottom: 60px;
   padding-left: 65px;
@@ -473,7 +473,6 @@ input::-ms-clear {
 }
 
 .modal {
-  display: none;
   position: absolute;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -488,12 +487,12 @@ input::-ms-clear {
   background-color: rgb(255, 255, 255);
   -webkit-box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
           box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
-}
-
-.modal-show {
-  display: block;
   -webkit-animation: bounce 1s;
           animation: bounce 1s;
+}
+
+.modal-not-show {
+  display: none;
 }
 
 .modal-error {
@@ -871,7 +870,7 @@ input::placeholder {
 .main-footer {
   width: 100%;
   margin: 0;
-  padding: 34px 0 30px 0;
+  padding: 35px 0 30px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1021,8 +1020,8 @@ input::placeholder {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  padding-right: 72px;
-  padding-left: 72px;
+  padding-right: 73px;
+  padding-left: 73px;
   width: 100%;
   background: rgb(66, 84, 100) url("../img/filter-background.jpg") left -56px;
 }
@@ -1058,13 +1057,13 @@ input::placeholder {
 }
 
 .filter-form-part--residence-type {
-  width: 471px;
-  margin-left: 15px;
+  width: 486px;
+  padding-left: 15px;
 }
 
 .filter-form-part--price-per-day {
   width: 318px;
-  margin-left: 12px;
+  padding-left: 12px;
 }
 
 .filter-form-part__header {
@@ -1092,7 +1091,7 @@ input::placeholder {
 
 .filter-form-part__option {
   margin-bottom: 25px;
-  padding-left: 41px;
+  padding-left: 40px;
 }
 
 .filter-form-part__option label {
@@ -1144,7 +1143,6 @@ input::placeholder {
   font-size: 0;
   border: 2px solid rgb(255, 255, 255);
   border-radius: 2px;
-
 }
 
 .filter-form-part__price-controls::after {
@@ -1226,7 +1224,7 @@ input::placeholder {
 .filter-form-part__button-transparent {
   display: block;
   margin: 0 auto;
-  padding: 6px 32px 6px 35px;
+  padding: 6px 35px;
   font-size: 14px;
   line-height: 21px;
   color: rgb(255, 255, 255);
