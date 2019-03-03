@@ -385,7 +385,7 @@ input::-ms-clear {
 .reasons-list__explanation {
   margin: 0;
   padding: 0;
-  padding-top: 22px;
+  padding-top: 21px;
   padding-right: 65px;
   padding-bottom: 60px;
   padding-left: 65px;
@@ -505,21 +505,25 @@ input::-ms-clear {
   0% {
     -webkit-transform: translateY(-395px);
             transform: translateY(-395px);
+            opacity: 0;
   }
 
   70% {
     -webkit-transform: translateY(30px);
             transform: translateY(30px);
+            opacity: 0.5;
   }
 
   90% {
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
+            opacity: 0.9;
   }
 
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+            opacity: 1;
   }
 }
 
@@ -527,21 +531,25 @@ input::-ms-clear {
   0% {
     -webkit-transform: translateY(-395px);
             transform: translateY(-395px);
+            opacity: 0;
   }
 
   70% {
     -webkit-transform: translateY(30px);
             transform: translateY(30px);
+            opacity: 0.5;
   }
 
   90% {
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
+            opacity: 0.9;
   }
 
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+            opacity: 1;
   }
 }
 
@@ -863,7 +871,7 @@ input::placeholder {
 .main-footer {
   width: 100%;
   margin: 0;
-  padding: 35px 0 30px 0;
+  padding: 34px 0 30px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1013,8 +1021,8 @@ input::placeholder {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  padding-right: 73px;
-  padding-left: 73px;
+  padding-right: 72px;
+  padding-left: 72px;
   width: 100%;
   background: rgb(66, 84, 100) url("../img/filter-background.jpg") left -56px;
 }
@@ -1050,13 +1058,13 @@ input::placeholder {
 }
 
 .filter-form-part--residence-type {
-  width: 486px;
-  padding-left: 15px;
+  width: 471px;
+  margin-left: 15px;
 }
 
 .filter-form-part--price-per-day {
-  width: 328px;
-  padding-left: 12px;
+  width: 318px;
+  margin-left: 12px;
 }
 
 .filter-form-part__header {
@@ -1084,7 +1092,7 @@ input::placeholder {
 
 .filter-form-part__option {
   margin-bottom: 25px;
-  padding-left: 40px;
+  padding-left: 41px;
 }
 
 .filter-form-part__option label {
@@ -1136,6 +1144,7 @@ input::placeholder {
   font-size: 0;
   border: 2px solid rgb(255, 255, 255);
   border-radius: 2px;
+
 }
 
 .filter-form-part__price-controls::after {
@@ -1153,7 +1162,7 @@ input::placeholder {
 
 .filter-form-part__price {
   display: inline-block;
-  width: 90px;
+  width: 82px;
   padding-top: 5px;
   padding-bottom: 4px;
   padding-left: 65px;
@@ -1217,7 +1226,7 @@ input::placeholder {
 .filter-form-part__button-transparent {
   display: block;
   margin: 0 auto;
-  padding: 6px 35px;
+  padding: 6px 32px 6px 35px;
   font-size: 14px;
   line-height: 21px;
   color: rgb(255, 255, 255);
@@ -1242,9 +1251,7 @@ input::placeholder {
   margin: 0;
   padding: 0;
   padding-top: 29px;
-  padding-right: 73px;
   padding-bottom: 31px;
-  padding-left: 73px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1264,6 +1271,7 @@ input::placeholder {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  margin-left: 73px;
   width: 164px;
   font-size: 21px;
   font-weight: bold;
@@ -1286,7 +1294,7 @@ input::placeholder {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  width: 858px;
+  width: 856px;
 }
 
 .sorting-filters__sorting {
@@ -1350,6 +1358,7 @@ input::placeholder {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  margin-right: 73px;
   width: 34px;
 }
 
@@ -1614,7 +1623,6 @@ input::placeholder {
   margin: 0;
   padding: 0;
   margin-bottom: 30px;
-  display: inline-block;
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
